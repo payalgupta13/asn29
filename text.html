@@ -10,22 +10,39 @@
         }
         .input-text{
             width: 70%;
-            margin: 20px auto;
+            margin: 10px auto;
             display:block;
             height: 100px;
+        }
+        .result-text{
+            width:70%;
+            display:block;
+            margin:10px auto;
+            height: 100px;
+        }
+        .button-container{
+            display: flex;
+            justify-content: space-around;
         }
     </style>
 </head>
 <body>
     <h1 class="app-title">Text Tool</h1>
     <input type="text" class="input-text" id="input-text" />
-    <p></p>
-    <div class="button container">
-        <button class="action-btn">UPPER CASE</button>
-
+    <p id="result-text" class="result-text"></p>
+    <div class="button-container">
+        <button class="action-btn" onclick="makeUppercase()">UPPERCASE</button>
+        <button class="action-btn">lowercase</button>
+        <button class="action-btn">Charecter Count</button>
+        <button class="action-btn">Word Count</button>
     </div>
     <script>
+        function makeUppercase(){
+            const inputElement = document.getElementById("input-text")
+            const resultElement = document.getElementById("result-text")
 
+            resultElement.innerText = inputElement.value.toUpperCase()
+        }
     </script>
 </body>
 </html>
