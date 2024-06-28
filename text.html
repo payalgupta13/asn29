@@ -32,7 +32,7 @@
     <p id="result-text" class="result-text"></p>
     <div class="button-container">
         <button class="action-btn" onclick="makeUppercase()">UPPERCASE</button>
-        <button class="action-btn">lowercase</button>
+        <button class="action-btn" onclick="makeLowercase()">lowercase</button>
         <button class="action-btn">Charecter Count</button>
         <button class="action-btn">Word Count</button>
     </div>
@@ -43,6 +43,19 @@
 
             resultElement.innerText = inputElement.value.toUpperCase()
         }
+
+        function makeLowercase(){
+            const inputElement = document.getElementById("input-text")
+            const resultElement = document.getElementById("result-text")
+
+            resultElement.innerText = inputElement.value.toLowerCase()
+            
+        }
+
+        function charCount(){
+            
+        }
+        
     </script>
 </body>
 </html>
